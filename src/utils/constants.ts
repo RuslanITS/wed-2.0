@@ -15,8 +15,8 @@ export const heroVideoUrl =
 
 export const heroPosterUrl =
   'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85';
-import story1 from 'src/assets/images/wed-1.jpg';
-import story2 from 'src/assets/images/wed-2.jpg';
+import story1 from './assets/images/wed-1.jpg';
+import story2 from './assets/images/wed-2.jpg';
 export const storyImages = [
   story1,
   story2,
