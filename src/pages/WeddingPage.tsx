@@ -3,7 +3,6 @@ import { Countdown } from '@/components/Countdown/Countdown';
 import { Hero } from '@/components/Hero/Hero';
 import styles from './WeddingPage.module.scss';
 
-const Story = lazy(() => import('@/components/Story/Story').then((module) => ({ default: module.Story })));
 const Timeline = lazy(() =>
   import('@/components/Timeline/Timeline').then((module) => ({ default: module.Timeline })),
 );
@@ -22,7 +21,6 @@ export const WeddingPage = () => (
   <main>
     <Hero />
     <Suspense fallback={<div className={styles.fallback}>Загружаем приглашение...</div>}>
-      <Story />
       <Countdown />
       <Timeline />
       <DressCode />

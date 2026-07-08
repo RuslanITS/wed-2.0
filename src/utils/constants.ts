@@ -1,4 +1,4 @@
-import type { DressCodeGroup, GalleryImage, TimelineItem, WishCard } from '@/types/wedding';
+import type { DressCodeGroup, TimelineItem, WishCard } from '@/types/wedding';
 
 export const weddingDate = new Date('2026-08-09T17:00:00+06:00');
 
@@ -15,12 +15,6 @@ export const heroVideoUrl =
 
 export const heroPosterUrl =
   'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85';
-import story1 from '../assets/images/wed-1.jpg';
-import story2 from '../assets/images/wed-2.jpg';
-export const storyImages = [
-  story1,
-  story2,
-] as const;
 
 export const timelineItems: readonly TimelineItem[] = [
   {
@@ -42,45 +36,6 @@ export const timelineItems: readonly TimelineItem[] = [
     time: '20:00',
     title: 'Танцы',
     description: 'Музыка, свет и вечер, который хочется запомнить.',
-  },
-] as const;
-
-export const galleryImages: readonly GalleryImage[] = [
-  {
-    id: 'rings',
-    src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1100&q=82',
-    alt: 'Обручальные кольца на светлой ткани',
-    height: 'regular',
-  },
-  {
-    id: 'table',
-    src: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=82',
-    alt: 'Элегантная сервировка свадебного ужина',
-    height: 'tall',
-  },
-  {
-    id: 'bouquet',
-    src: 'https://images.unsplash.com/photo-1521543269800-27ec99e4f4ff?auto=format&fit=crop&w=1000&q=82',
-    alt: 'Нежный свадебный букет',
-    height: 'regular',
-  },
-  {
-    id: 'couple',
-    src: 'https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=1200&q=82',
-    alt: 'Пара на свадебной прогулке',
-    height: 'wide',
-  },
-  {
-    id: 'details',
-    src: 'https://images.unsplash.com/photo-1513278974582-3e1b4a4fa21e?auto=format&fit=crop&w=1000&q=82',
-    alt: 'Свадебные детали в золотых оттенках',
-    height: 'tall',
-  },
-  {
-    id: 'dinner',
-    src: 'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?auto=format&fit=crop&w=1000&q=82',
-    alt: 'Праздничный зал с теплым светом',
-    height: 'regular',
   },
 ] as const;
 
