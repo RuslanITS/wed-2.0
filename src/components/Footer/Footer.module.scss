@@ -1,0 +1,20 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.footer {
+  @include container;
+  padding: 44px 0 72px;
+  text-align: center;
+
+  p {
+    margin: 0 0 8px;
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 8vw, 4.6rem);
+    line-height: 1;
+  }
+
+  span {
+    color: $muted;
+    font-weight: 700;
+  }
+}

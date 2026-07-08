@@ -1,0 +1,44 @@
+@use '@/styles/variables' as *;
+
+.player {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  border-radius: 50%;
+  background: rgba(31, 31, 31, 0.84);
+  box-shadow: 0 18px 44px rgba(31, 31, 31, 0.22);
+  backdrop-filter: blur(18px);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+
+  &:hover {
+    background: $accent;
+    transform: translateY(-2px);
+  }
+}
+
+.musicIcon {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .player {
+    width: auto;
+    min-width: 72px;
+    padding-inline: 18px;
+    border-radius: 999px;
+  }
+
+  .musicIcon {
+    display: block;
+  }
+}

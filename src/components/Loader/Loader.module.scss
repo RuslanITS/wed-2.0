@@ -1,0 +1,32 @@
+@use '@/styles/variables' as *;
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: $background;
+}
+
+.mark {
+  color: $text;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 13vw, 7rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+
+  span {
+    margin-inline: 0.16em;
+    color: $accent;
+  }
+}
+
+.line {
+  position: absolute;
+  width: min(180px, 42vw);
+  height: 1px;
+  margin-top: clamp(96px, 24vw, 176px);
+  background: linear-gradient(90deg, transparent, $accent, transparent);
+  transform-origin: center;
+}

@@ -1,0 +1,64 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.countdown {
+  @include section;
+  background: linear-gradient(180deg, rgba(232, 224, 214, 0), rgba(232, 224, 214, 0.72));
+}
+
+.inner {
+  @include container;
+  text-align: center;
+}
+
+.eyebrow {
+  @include eyebrow;
+  margin: 0 0 12px;
+}
+
+.title {
+  max-width: 620px;
+  margin: 0 auto 34px;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 9vw, 5.4rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card {
+  @include glass;
+  display: grid;
+  min-height: 134px;
+  place-items: center;
+  padding: 22px 12px;
+  border-radius: 26px;
+
+  strong {
+    color: $text;
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 12vw, 5.2rem);
+    font-weight: 400;
+    line-height: 0.95;
+  }
+
+  span {
+    color: $muted;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+}

@@ -1,0 +1,509 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 20px;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+
+  background: url("/images/hero-bg.jpg") center center / cover no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+          linear-gradient(
+                          rgba(18, 15, 11, .55),
+                          rgba(18, 15, 11, .72)
+          );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 420px;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+
+  border-radius: 28px;
+
+  padding: 42px 28px;
+
+  text-align: center;
+
+  box-shadow:
+          0 25px 80px rgb(0, 0, 0);
+
+  border: 1px solid rgba(255,255,255,.45);
+}
+
+.header{
+  margin-bottom: 28px;
+}
+
+.invitation{
+
+  margin:0 0 16px;
+
+  color: #110800;
+
+  text-transform:uppercase;
+
+  letter-spacing:4px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+}
+
+.names{
+
+  margin:0;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:14px;
+
+  font-family:"Cormorant Garamond",serif;
+
+  color: #000000;
+
+  font-size:46px;
+
+  font-weight:600;
+
+  line-height:1.05;
+
+}
+
+.names span{
+
+  color: #000000;
+
+  font-size:34px;
+
+}
+
+.description{
+
+  margin:0 auto 36px;
+
+  max-width:290px;
+
+  color: #000000;
+
+  font-size:17px;
+
+  line-height:1.8;
+
+}
+
+.dateCard {
+
+  position: relative;
+
+  margin: 20px auto 38px;
+
+  width: 100%;
+
+  padding: 30px 24px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+                  180deg,
+                  #fcfaf7 0%,
+                  #f7f2eb 100%
+  );
+
+  border: 1px solid rgba(197,154,91,.18);
+
+  box-shadow:
+          0 12px 35px rgba(0,0,0,.06);
+
+}
+
+.weekday {
+
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #B68C53;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+}
+
+.date {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 16px;
+
+}
+
+.day {
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 82px;
+
+  line-height: .9;
+
+  font-weight: 700;
+
+  color: #3B3026;
+
+}
+
+.month {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+}
+
+.month strong {
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  color: #3B3026;
+
+  font-weight: 600;
+
+}
+
+.month span {
+
+  margin-top: 6px;
+
+  font-size: 16px;
+
+  color: #7E7266;
+
+}
+
+.time {
+
+  margin: 24px 0 0;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #B68C53;
+
+}
+
+.separator {
+
+  width: 70px;
+
+  height: 1px;
+
+  margin: 24px auto;
+
+  background: linear-gradient(
+                  to right,
+                  transparent,
+                  #C8A56E,
+                  transparent
+  );
+
+}
+
+.place {
+
+  margin: 0;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  font-family: "Cormorant Garamond", serif;
+
+  color: #3B3026;
+
+}
+
+.city {
+
+  display: block;
+
+  margin-top: 8px;
+
+  color: #7A6D60;
+
+  font-size: 16px;
+
+}
+.button {
+
+  width: 100%;
+
+  height: 58px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+                  135deg,
+                  #D6B178 0%,
+                  #C59A5B 100%
+  );
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  letter-spacing: .3px;
+
+  transition:
+          transform .3s ease,
+          box-shadow .3s ease,
+          filter .3s ease;
+
+  box-shadow:
+          0 14px 35px rgba(197,154,91,.35);
+
+}
+
+.button:hover {
+
+  transform: translateY(-2px);
+
+  filter: brightness(1.05);
+
+  box-shadow:
+          0 20px 45px rgba(0, 0, 0, 0.45);
+
+}
+
+.button:active {
+
+  transform: scale(.98);
+
+}
+
+.hint {
+
+  display: block;
+
+  margin-top: 18px;
+
+  font-size: 13px;
+
+  color: rgb(0, 0, 0);
+
+  text-align: center;
+
+}
+
+@media (max-width:480px){
+
+  .content{
+
+    max-width:100%;
+
+    padding:34px 22px;
+
+    border-radius:24px;
+
+  }
+
+  .names{
+
+    font-size:38px;
+
+    gap:10px;
+
+  }
+
+  .names span{
+
+    font-size:28px;
+
+  }
+
+  .description{
+
+    max-width:260px;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+  }
+
+  .dateCard{
+
+    padding:24px 18px;
+
+  }
+
+  .day{
+
+    font-size:68px;
+
+  }
+
+  .month strong{
+
+    font-size:24px;
+
+  }
+
+  .month span{
+
+    font-size:14px;
+
+  }
+
+  .time{
+
+    font-size:19px;
+
+  }
+
+  .place{
+
+    font-size:20px;
+
+  }
+
+  .city{
+
+    font-size:15px;
+
+  }
+
+  .button{
+
+    height:54px;
+
+    font-size:16px;
+
+  }
+
+}
+
+@media (min-width:768px){
+
+  .content{
+
+    max-width:520px;
+
+    padding:56px 46px;
+
+  }
+
+  .names{
+
+    font-size:58px;
+
+  }
+
+  .names span{
+
+    font-size:42px;
+
+  }
+
+  .description{
+
+    max-width:360px;
+
+    font-size:18px;
+
+  }
+
+  .day{
+
+    font-size:98px;
+
+  }
+
+}
+
+.content::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:18px;
+
+  left:18px;
+
+  width:42px;
+
+  height:42px;
+
+  border-top:1px solid rgba(197,154,91,.35);
+
+  border-left:1px solid rgba(197,154,91,.35);
+
+}
+
+.content::after{
+
+  content:"";
+
+  position:absolute;
+
+  right:18px;
+
+  bottom:18px;
+
+  width:42px;
+
+  height:42px;
+
+  border-right:1px solid rgba(197,154,91,.35);
+
+  border-bottom:1px solid rgba(197,154,91,.35);
+
+}

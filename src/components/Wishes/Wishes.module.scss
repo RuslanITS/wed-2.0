@@ -1,0 +1,74 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.wishes {
+  @include section;
+  background: $text;
+  color: #fff;
+}
+
+.inner {
+  @include container;
+}
+
+.heading {
+  margin-bottom: 34px;
+  text-align: center;
+
+  p {
+    @include eyebrow;
+    margin: 0 0 12px;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 9vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  min-height: 220px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.055);
+
+  span {
+    color: $accent;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+  }
+
+  h3 {
+    margin: 28px 0 10px;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.72;
+  }
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

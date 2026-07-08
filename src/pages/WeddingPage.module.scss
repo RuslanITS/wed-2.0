@@ -1,0 +1,8 @@
+@use '@/styles/variables' as *;
+
+.fallback {
+  padding: 80px 24px;
+  color: $muted;
+  text-align: center;
+  font-weight: 700;
+}

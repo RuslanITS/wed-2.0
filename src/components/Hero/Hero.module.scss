@@ -1,0 +1,133 @@
+@use '@/styles/variables' as *;
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #fff;
+  isolation: isolate;
+}
+
+.video {
+  position: absolute;
+  inset: -4%;
+  z-index: -2;
+  width: 108%;
+  height: 108%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.62)),
+    radial-gradient(circle at 50% 36%, rgba(200, 169, 106, 0.28), transparent 40%);
+}
+
+.content {
+  width: min(100% - 34px, 900px);
+  padding-top: 76px;
+  text-align: center;
+}
+
+.kicker {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.title {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.9rem, 15vw, 8.8rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: 0;
+
+  span {
+    color: $accent;
+    font-size: 0.55em;
+    line-height: 1.1;
+  }
+}
+
+.date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 18px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.phrase {
+  max-width: 620px;
+  margin: 16px auto 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  line-height: 1.35;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+  margin-top: 22px;
+  padding: 0 24px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(18px);
+  font-weight: 700;
+}
+
+@media (min-width: 760px) {
+  .content {
+    padding-top: 84px;
+  }
+}
+
+@media (max-height: 760px) {
+  .kicker {
+    margin-bottom: 10px;
+    font-size: 0.68rem;
+  }
+
+  .title {
+    font-size: clamp(3.4rem, 12vw, 7.2rem);
+  }
+
+  .date {
+    margin-top: 16px;
+    font-size: 1rem;
+  }
+
+  .phrase {
+    margin-top: 12px;
+    font-size: clamp(1.05rem, 3vw, 1.55rem);
+  }
+
+  .cta {
+    min-height: 48px;
+    margin-top: 16px;
+    padding-inline: 20px;
+  }
+}

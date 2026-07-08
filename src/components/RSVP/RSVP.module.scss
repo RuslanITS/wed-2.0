@@ -1,0 +1,163 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.rsvp {
+  @include section;
+}
+
+.inner {
+  @include container;
+  display: grid;
+  gap: 28px;
+  align-items: start;
+}
+
+.copy {
+  p {
+    @include eyebrow;
+    margin: 0 0 12px;
+  }
+
+  h2 {
+    margin: 0 0 18px;
+    font-family: var(--font-display);
+    font-size: clamp(2.7rem, 10vw, 5.4rem);
+    font-weight: 400;
+    line-height: 0.98;
+  }
+
+  span {
+    display: block;
+    max-width: 520px;
+    color: $muted;
+    line-height: 1.75;
+  }
+}
+
+.form {
+  @include glass;
+  display: grid;
+  gap: 16px;
+  padding: clamp(20px, 5vw, 34px);
+  border-radius: 30px;
+
+  label {
+    display: grid;
+    gap: 8px;
+    color: $muted;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 15px;
+    color: $text;
+    border: 1px solid rgba(31, 31, 31, 0.12);
+    border-radius: 16px;
+    outline: 0;
+    background: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:focus {
+      border-color: rgba(200, 169, 106, 0.72);
+      box-shadow: 0 0 0 4px rgba(200, 169, 106, 0.12);
+    }
+  }
+
+  textarea {
+    min-height: 128px;
+    padding-block: 14px;
+    resize: vertical;
+  }
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 56px;
+    margin-top: 6px;
+    color: #fff;
+    border-radius: 999px;
+    background: $text;
+    font-weight: 800;
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease,
+      opacity 0.25s ease;
+
+    &:hover:not(:disabled) {
+      background: $accent;
+      transform: translateY(-2px);
+    }
+
+    &:disabled {
+      cursor: wait;
+      opacity: 0.72;
+    }
+  }
+}
+
+.row {
+  display: grid;
+  gap: 16px;
+}
+
+.toast {
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+  z-index: 170;
+  display: grid;
+  gap: 4px;
+  width: min(calc(100% - 32px), 360px);
+  padding: 18px 20px;
+  color: $text;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: $shadow;
+  backdrop-filter: blur(18px);
+
+  strong {
+    font-size: 1rem;
+  }
+
+  span {
+    color: $muted;
+    line-height: 1.5;
+  }
+}
+
+.success {
+  border-color: rgba(200, 169, 106, 0.48);
+}
+
+.error {
+  border-color: rgba(166, 64, 64, 0.4);
+}
+
+@media (min-width: 720px) {
+  .row {
+    grid-template-columns: 1fr 0.6fr;
+  }
+}
+
+@media (min-width: 940px) {
+  .inner {
+    grid-template-columns: 0.82fr 1fr;
+    gap: 64px;
+  }
+}

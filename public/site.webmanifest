@@ -1,0 +1,16 @@
+{
+  "name": "Руслан & Алпеим",
+  "short_name": "Wedding",
+  "description": "Свадебное приглашение Руслана и Алпеим",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#C8A96A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

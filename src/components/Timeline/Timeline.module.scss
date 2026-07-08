@@ -1,0 +1,88 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.timeline {
+  @include section;
+  background: $text;
+  color: #fff;
+}
+
+.inner {
+  @include container;
+  display: grid;
+  gap: 38px;
+}
+
+.heading {
+  p {
+    @include eyebrow;
+    margin: 0 0 14px;
+  }
+
+  h2 {
+    max-width: 720px;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.45rem, 9vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+  }
+}
+
+.list {
+  position: relative;
+  display: grid;
+  gap: 16px;
+
+  &::before {
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 70px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(200, 169, 106, 0.72), transparent);
+    content: '';
+  }
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 94px minmax(0, 1fr);
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+
+  time {
+    color: $accent;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 1.08rem;
+  }
+
+  p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 860px) {
+  .inner {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .item {
+    padding: 26px;
+  }
+}
